@@ -1,9 +1,10 @@
 .header a {
   text-decoration: none;
   margin-left: 10px;
-  background-color: skyblue;
+  color: #9ae17b;
   font-weight: 900;
   padding: 10px 15px;
+  font-size: 25px;
 }
 .header {
   margin: 20px;
@@ -11,9 +12,11 @@
 .header button {
   text-decoration: none;
   margin-left: 10px;
-  background-color: skyblue;
   font-weight: 900;
   padding: 10px 15px;
-  color: white;
-  border: none;
+  color: #9ae17b;
+  font-size: 25px;
+}
+.header a:hover {
+  transform: scale(1);
 }

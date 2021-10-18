@@ -1,4 +1,4 @@
-import { getAuth, GithubAuthProvider, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut } from "firebase/auth";
+import { getAuth, GithubAuthProvider, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut,createUserWithEmailAndPassword } from "firebase/auth";
 import { useEffect, useState } from 'react';
 import InitializeFirebase from './../firebaseConfig/InitializeFirebase';
 
@@ -28,6 +28,7 @@ const useFirebase=()=>{
             console.log(userInfo);
         })
     }
+
     const logOut=()=>{
         signOut(auth)
         .then(() => {
