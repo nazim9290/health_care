@@ -1,0 +1,19 @@
+.header a {
+  text-decoration: none;
+  margin-left: 10px;
+  background-color: skyblue;
+  font-weight: 900;
+  padding: 10px 15px;
+}
+.header {
+  margin: 20px;
+}
+.header button {
+  text-decoration: none;
+  margin-left: 10px;
+  background-color: skyblue;
+  font-weight: 900;
+  padding: 10px 15px;
+  color: white;
+  border: none;
+}
