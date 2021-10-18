@@ -7,6 +7,7 @@ const Header = () => {
     const {user,logOut}=useAuth()
     return (
         <div className="header">
+            <img className="w-10" src="https://i.ibb.co/Dz7DhVc/screenshot-hatchful-shopify-com-2021-10-18-13-53-34.png" alt="" />
             <Link to="/home">Home</Link>
             <Link to="/about">About</Link> 
             <Link to="/terms">Terms & policy</Link>

@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "NURSE SERVICE AT HOME",
+    "img": "https://media.istockphoto.com/photos/caregiver-assist-senior-woman-at-home-picture-id1296176562?b=1&k=20&m=1296176562&s=170667a&w=0&h=gHya2Ee_SnnfngzSvzRra93uSlb7xG76apicnILHvIw=",
+    "email": "Sincere@april.biz",
+    "phone": "1-770-736-8031 x56442",
+    "description": "Nurse Service at Home - Our home service is ideal for patients who need long-term health care for complex medical problems and daily needs. This program aims to help elderly home patients regain their independence through a systematic and loving care plan specifically designed for each senior care"
+  },
+  {
+    "id": 2,
+    "name": "BABY CARE AT HOME",
+    "img": "https://media.istockphoto.com/photos/mother-cleaning-up-and-wipes-face-of-her-newborn-child-with-cotton-picture-id1336355791?b=1&k=20&m=1336355791&s=170667a&w=0&h=YbjOjjVLwqRkbasn4xCgPn2fV_yK5649IyKWdX61qws=",
+    "email": "Shanna@melissa.tv",
+    "phone": "010-692-6593 x09125",
+    "description": "A new baby is undoubtedly a very pleasant time for everyone at home. But it's also true that a new mother experiences many physiological & emotional changes, after the birth of a child. It is the time when a mother recovers from the birth of a child and requires expert attention and care for the baby and mother."
+  },
+  {
+    "id": 3,
+    "name": "DOCTOR HOME VISIT",
+    "img": "https://media.istockphoto.com/photos/young-doctor-visits-senior-woman-with-surgical-mask-picture-id1284869164?b=1&k=20&m=1284869164&s=170667a&w=0&h=TPgUQkJOJ1yII5l5SC8LstdHmhRhvPQXq-N9J8I6MNI=",
+    "email": "Nathan@yesenia.net",
+    "phone": "1-463-123-4447",
+    "description": "Our professional home care services include a variety of care and support services for individuals who are recovering from hospital care, disabled, chronic, or seriously ill. We already know patients recover much better, and faster, at home because the risk of infection reduced and the chance of re-entry to the hospital minimized. Doctor Home Visit call now ."
+  },
+  {
+    "id": 4,
+    "name": "PHYSIO THERAPY ",
+    "img": "https://media.istockphoto.com/photos/nurse-and-male-patient-exercising-picture-id1280119885?b=1&k=20&m=1280119885&s=170667a&w=0&h=k_oX1Qp-nyrysfvnqffMO9rfeulZmdNytZi6sKEn_oA=",
+    "email": "Julianne.OConner@kory.org",
+    "phone": "493-170-9623 x156",
+    "description": "Under this service, we are promised to maintain, restore, and promote not only physical function but also health and fitness. As per expert therapist suggestion, our therapist works almost 24/7 and prevent symptoms, develop disorders and functional limitations and disabilities that may be caused by disease, disorder. You needed physio therapist Contact us."
+  },
+  {
+    "id": 5,
+    "name": "ONE CALL SERVICE",
+    "img": "https://media.istockphoto.com/photos/pharmacist-consults-computer-records-for-patient-picture-id1153451671?b=1&k=20&m=1153451671&s=170667a&w=0&h=btwSZhzl_iHU7TW0Ykk2F7ijKIHuobzTx2Rf4D4Fams=",
+    "email": "Lucio_Hettinger@annie.ca",
+    "phone": "(254)954-1289",
+    "description": "Nurse home care experience visits patients at home for IV and IM, and others need one time. We have a number of nurses who request staff costs for each visit. Just call us, and ask an experienced nurse to manage them at home. On top of this basic immunization for children and elderly care, pregnancy care, and our specialists can give comprehensive vaccinations in the comfort of your home."
+  },
+  {
+    "id": 6,
+    "name": "OXYGEN SUPPORT",
+    "img": "https://media.istockphoto.com/photos/male-nurse-setting-up-iv-drip-picture-id1312641833?b=1&k=20&m=1312641833&s=170667a&w=0&h=Zv2f81Q_PU83j65OizOGdNXfDYOOECVdrHSZECZA2WM=",
+    "email": "Karley_Dach@jasper.info",
+    "phone": "1-477-935-8478 x6430",
+    "description": "We provide medical equipment’s and oxygen cylinder rent sell also refill for all client needs. The equipment’s offered by us are very reliable and best price in Bangladesh and well researched. We always carry out a background check on every equipment before using. Furthermore, equipment rental rates can be negotiated based on client budget constraints. We provide more experienced staff members based on the equipment home delivery in dhaka."
+  }
+]
