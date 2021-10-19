@@ -1,14 +1,20 @@
 import React, { useEffect, useState } from 'react';
+import { useHistory } from 'react-router';
 import "./Service.css";
 
 const Service = () => {
     const [services,setServices]=useState([])
+    const history = useHistory();
 
     useEffect(()=>{
         fetch("./data.json")
         .then(res=>res.json())
         .then(data=>setServices(data))
     },[])
+
+    const serviceDetail=(id)=>{
+        history.push(`/service/${id}`)
+    }
 
     return (
         <div className="container my-3">
@@ -27,7 +33,7 @@ const Service = () => {
                         <div className="card-dis px-2">
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique officia, enim odio quos aspernatur iusto dolores amet necessitatibus tempore omnis, beatae aperiam quod fugit doloribus exercitationem officiis, fugiat eius mollitia.
                         </div>
-                        <button className="btn btn-warning my-2">More Details</button>
+                        <button className="btn btn-warning my-2" onClick={()=>{serviceDetail(pd.id)}}>More Details</button>
                     </div>
                 </div>
                  ) }

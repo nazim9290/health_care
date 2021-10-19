@@ -7,6 +7,7 @@ import Header from './Component/Header/Header';
 import Home from './Component/Home/Home';
 import Login from './Component/Login/Login';
 import Registration from './Component/Registration/Registration';
+import Servicedetails from './Component/Services/ServiceDetail/Servicedetails';
 import Terms from './Component/Terms&policy/Terms';
 import AuthProvider from './Context/AuthProvider';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
@@ -35,6 +36,9 @@ function App() {
         </Route>
         <Route exact path="/registration">
             <Registration/>
+        </Route>
+        <Route exact path="/service/:id">
+            <Servicedetails/>
         </Route>
         <PrivateRoute exact path="/appointment">
             <Appointment/>
