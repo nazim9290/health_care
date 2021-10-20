@@ -1,27 +1,32 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import "./single.css";
 
 const Servicedetails = () => {
-    const {id}=useParams();
-    console.log(id);
+    const {pdid}=useParams();
     const [products,setProducts]=useState([])
-   // const [singleproduct,setSingleproduct]=useState([]);
+   const [singleproduct,setSingleproduct]=useState({});
 
     useEffect(()=>{
-        fetch("./data2.json")
+        fetch("https://raw.githubusercontent.com/nazim9290/datajson/main/productdata.json")
         .then((res)=>res.json())
         .then((data)=>setProducts(data))
     },[])
     
-// useEffect(()=>{
-//     const productdetails=products.find(pd=>pd.id===id);
-//     setSingleproduct(productdetails);
-// },[products]);
-
-console.log(products);
+useEffect(()=>{
+    const productdetails=products.find(prd=>prd.id==pdid);
+    setSingleproduct(productdetails)
+},[products]);
     return (
         <div>
-            thhiis oahfojs
+           <div className="card product mb-5 shadow">
+  <img src={singleproduct?.img} className="card-img-top" alt="..."/>
+  <div className="card-body">
+    <h5 className="card-title">{singleproduct?.name}</h5>
+    <p className="card-text">{singleproduct?.description}</p>
+    <Link to="/appoint">Appoint Now</Link>
+  </div>
+</div>
         </div>
     );
 };

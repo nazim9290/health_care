@@ -31,7 +31,7 @@ const Service = () => {
                     <div className="p-2">
                         <h3 className="service-name">{pd.name}</h3>
                         <div className="card-dis px-2">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique officia, enim odio quos aspernatur iusto dolores amet necessitatibus tempore omnis, beatae aperiam quod fugit doloribus exercitationem officiis, fugiat eius mollitia.
+                            {pd.description}
                         </div>
                         <button className="btn btn-warning my-2" onClick={()=>{serviceDetail(pd.id)}}>More Details</button>
                     </div>

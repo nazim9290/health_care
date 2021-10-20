@@ -1,0 +1,14 @@
+.covid {
+  background-image: url(https://nhsforthvalley.com/wp-content/uploads/2021/01/MTU-website.jpg);
+  height: 70vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+.headin{
+  height: 90vh;
+}
+.heading-containe h1 {
+  color: black;
+  font-weight: 900;
+}

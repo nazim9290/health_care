@@ -1,59 +1,63 @@
-import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
 import React, { useState } from "react";
-import { useForm } from "react-hook-form";
+import useAuth from "../../hooks/useAuth";
 import InitializeFirebase from './../../firebaseConfig/InitializeFirebase';
 import "./Registration.css";
 
 InitializeFirebase()
 
 const Registration = () => {
-
-    
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const {handleUserRegister,
+        handleUserLogin,googleLogin,githubLogin}=useAuth()
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const onSubmit = (data) =>{
-        setEmail((data.email));
-        setPassword((data.password));
-        singinWithemailpassword(email,password);
-    }
-    const auth = getAuth();
-    const singinWithemailpassword=(email,password)=>{
-        
-        console.log(email,password);
-createUserWithEmailAndPassword(auth, email, password)
-  .then(result => {
-   console.log(result.user);
-  })
-  .catch((error) => {
-   console.log(error.message);
-    // ..
-  });
-    }
 
+
+    const handleEmail = (e) =>{
+       const email=e.target.value;
+       setEmail(email)
+    }
+    const handlePassword = (e) =>{
+        const password= e.target.value;
+        setPassword(password)
+    }
+    console.log(email)
+    console.log(password);
+
+    const onRegister=(e)=>{
+        e.preventDefault()
+        if(email && password){
+            handleUserRegister(email,password);
+        }else{
+            alert("email and password is required")
+        }
+      
+
+    }
   
   
     return (
-        <div className="container">
-            <h1>Registration</h1>
-            <div className="row">
-                <div className="col-md-6 col-lg-8">
-                <div className="registration-form">
-          <form onSubmit={handleSubmit(onSubmit)}>
-      <input className="my-2" {...register("email",{ required: true })} placeholder="Your Email" />
-      {errors.email && <span className="error">This field is required</span>}
-      
-      <input className="my-2" {...register("password",{ required: true , minLength : 6})} placeholder="Your Password" />
-      {errors.password && <span className="error">password must be 6 cracter more</span>}
-      <input className="my-2"  type="submit" />
-      <p>{email}</p>
-      <p>{password}</p>
-    </form>
-        </div>
-                </div>
-            </div>
-        
-        </div>
+        <div className="login-section container mx-auto">
+        <div class="login">
+         <div class="login-container">
+              <h1>Registration</h1>
+              <form onSubmit={onRegister}>
+              <input onBlur={handleEmail} type="email" name="email" placeholder="Email" />
+              <input onBlur={handlePassword} type="password" name="password" placeholder="Password" /><br />
+              <input type="checkbox" /><span>Remember me</span>
+              <br />
+              <br />
+              <input className="btn btn-primary px-5" type="submit" value="Sign Up"/>
+              </form>
+              <hr /><p>Or Connect With</p><hr />
+              <ul>
+                  <li onClick={googleLogin}><i class="fab fa-google fa-2x"></i></li>
+                  {/* <li><i class="fab fa-twitter fa-2x"></i></li> */}
+                  <li onClick={githubLogin}><i class="fab fa-github fa-2x"></i></li>
+                  {/* <li><i class="fab fa-linkedin-in fa-2x"></i></li> */}
+              </ul>
+         </div>
+      </div>
+      </div>
     );
 };
 

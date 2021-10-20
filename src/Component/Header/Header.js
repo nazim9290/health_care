@@ -16,17 +16,16 @@ const Header = () => {
                     <div className="container-fluid p-2">
                 <Link to="/home">Home</Link>
             <Link to="/about">About</Link> 
-            <Link to="/terms">Terms & policy</Link>
+            <Link to="/doctors">Doctors</Link>
             <Link to="/appointment">APPOINTMENT</Link>
             <div  class="">
-            </div>
-          {user.name&&  <button>{user.name}</button>}
-            {user.name ?
+            {user.displayName || user.email ?
                 <button onClick={logOut}>Log out</button>
                 :
-            <Link to="/login">Login</Link>}
-            <Link to="/registration">Registration</Link>
-
+            <Link to="/login">Login</Link>
+            }
+            <span> {user.displayName || user.email}</span>
+            </div>
             </div>
                 </div>
             </div>

@@ -3,12 +3,14 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 import About from './Component/About/About';
 import Appointment from './Component/Appointment/Appointment';
+import Doctors from './Component/Doctors/Doctors';
+import Footer from './Component/Footer/Footer';
 import Header from './Component/Header/Header';
 import Home from './Component/Home/Home';
 import Login from './Component/Login/Login';
+import Nofound from './Component/Nofound/Nofound';
 import Registration from './Component/Registration/Registration';
 import Servicedetails from './Component/Services/ServiceDetail/Servicedetails';
-import Terms from './Component/Terms&policy/Terms';
 import AuthProvider from './Context/AuthProvider';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 
@@ -25,28 +27,29 @@ function App() {
         <Route exact path="/">
             <Home/>
         </Route>
-        <Route exact path="/terms">
-            <Terms/>
+        <Route path="/doctors">
+            <Doctors/>
         </Route>
-        <Route exact path="/about">
+        <Route path="/about">
             <About/>
         </Route>
-        <Route exact path="/login">
+        <Route path="/login">
             <Login/>
         </Route>
-        <Route exact path="/registration">
+        <Route path="/registration">
             <Registration/>
         </Route>
-        <Route exact path="/service/:id">
+        <PrivateRoute exact path="/service/:pdid">
             <Servicedetails/>
-        </Route>
+        </PrivateRoute>
         <PrivateRoute exact path="/appointment">
             <Appointment/>
         </PrivateRoute>
         <Route  path="*">
-            <Registration/>
+            <Nofound/>
         </Route>
             </Switch>
+            <Footer/>
             </BrowserRouter>
      </AuthProvider>
     </div>
